@@ -41,6 +41,9 @@ class MaintenancePasswordTags extends Tags
 
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
                 <style>
+                    .field {
+                        margin: 0 !important;
+                    }
                     #form-maintenance, #password {
                         position: fixed;
                         bottom: 15px;
@@ -54,6 +57,30 @@ class MaintenancePasswordTags extends Tags
                         top:15px;
                         right:15px;                        
                     }
+                    <?php echo $this->getConfig('css');?>
+
+                    <?php if($bgi = $this->getConfig('background-image')) {?>
+                    body {
+                        background-image:url(<?php echo $bgi?>);
+                        background-repeat:no-repeat;
+                        background-size: cover;
+                    }
+                    <?php }?>
+
+                    <?php if($bg = $this->getConfig('background-color','#333333')) {?>
+                    body {
+                        background-color:<?php echo $bg?>;
+                    }
+                    .title, .subtitle {
+                        text-shadow:1px 1px 1px <?php echo $bg?>;
+                    }
+                    <?php }?>
+
+                    <?php if($color = $this->getConfig('color','#FFFFFF')) {?>
+                    body, .title, .subtitle {
+                        color:<?php echo $color?>;
+                    }
+                    <?php }?>
                 </style>
             </head>
             <body>
@@ -63,7 +90,7 @@ class MaintenancePasswordTags extends Tags
                 </div>
             <?php }?>
 
-                <section class="hero is-light is-fullheight">
+                <section class="hero is-fullheight">
                   <div class="hero-body">
                     <div class="container">
                         <?php if($logo = $this->getConfig('logo')) {?>
@@ -78,7 +105,7 @@ class MaintenancePasswordTags extends Tags
                     </div>
                 </div>
         </section>                
-        <button type="button" class="button is-primary" id="password">
+        <button type="button" class="button is-primary" id="password" style="background-color: <?php echo $this->getConfig('button-color','#00d1b2');?>">
             <?php echo $this->getConfig('button','I have a password');?>
         </button>
 
@@ -101,6 +128,7 @@ class MaintenancePasswordTags extends Tags
                 this.classList.add('hide');
                 document.querySelector('#form-maintenance').classList.remove('hide')
             });
+            <?php echo $this->getConfig('js');?>
         </script>
     </body>
     </html>

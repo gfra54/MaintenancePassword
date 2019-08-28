@@ -27,17 +27,16 @@ You then need to define a password in the addon's settings.
 You can use the control panel left menu "Maintenance" link, or go to `Addons`, then click on the three dots at the right of the addon's line, and click `Settings`
 
 Here you can set the main password.
-You can also change the title and subtitle shown on the maintenance page. You can also set a logo if you need, and some other text fields.
+You can also change the title and subtitle shown on the maintenance page. You can also set a logo if you need, and some other text fields : background image, colors, custom css and js.
 
 
 ## Removing the maintenance page
 
-If you want to remove the maintenance page, you can set the toggle in the settings to do just that.
+If you want to deactivate the maintenance page, you can set the toggle in the settings to do just that.
 
 ## Coming soon
 
 Here are some of the stuff that will be added in the near future :
- * custom css
  * setting up (and revoking) multiple passwords.
  * Remove the maintenance page when a user is connecter to the control panel
 
