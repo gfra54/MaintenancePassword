@@ -37,6 +37,8 @@ If you want to deactivate the maintenance page, you can set the toggle in the se
 ## Coming soon
 
 Here are some of the stuff that will be added in the near future :
- * setting up (and revoking) multiple passwords.
- * Remove the maintenance page when a user is connected to the control panel
+
+ - setting up (and revoking) multiple passwords.
+
+ - Remove the maintenance page when a user is connected to the control panel
 
