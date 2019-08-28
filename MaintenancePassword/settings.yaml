@@ -1,18 +1,45 @@
 fields:
+  active:
+    display: Activate maintenance mode;
+    type: toggle
   password:
-    display: Password (Leave blank to deactivate the maintenance page)
+    display: Password
     type: text
-  title:
-    display: Title
+    show_when:
+      active: true
+  page_title:
+    display: Content of the <title> tag.
     type: text
+    show_when:
+      active: true
+  main_title:
+    display: Title on page
+    type: text
+    show_when:
+      active: true
   subtitle:
-    display: Subtitle
+    display: Subtitle on page
     type: text
+    show_when:
+      active: true
   button:
     display: Text for the password button
     type: text
+    show_when:
+      active: true
+  placeholder:
+    display: Placeholder text for the password input
+    type: text
+    show_when:
+      active: true
+  password_error:
+    display: Message when the password is wrong
+    show_when:
+      active: true
   logo:
     display: Logo
     type: assets
     container: main
     max_files: 1
+    show_when:
+      active: true

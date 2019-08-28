@@ -35,7 +35,9 @@ class MaintenancePasswordTags extends Tags
                 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name="description" content="{{ meta_description or subtitle }}">
-                <title>Maintenance</title>
+                <title>
+                      <?php echo $this->getConfig('page_title','Maintenance');?>
+                </title>
 
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
                 <style>
@@ -57,7 +59,7 @@ class MaintenancePasswordTags extends Tags
             <body>
                 <?php if(isset($_GET['maintenance-error'])) {?>
                 <div class="notification is-danger">
-                  Error. Wrong password.
+                    <?php echo $this->getConfig('password_error','Error. Wrong password.');?>
                 </div>
             <?php }?>
 
@@ -68,7 +70,7 @@ class MaintenancePasswordTags extends Tags
                             <img src="<?php echo $logo;?>" style="height:150px">
                         <?php }?>
                       <h1 class="title is-1">
-                        <?php echo $this->getConfig('title','This site is closed for maintenance');?>
+                        <?php echo $this->getConfig('main_title','This site is closed for maintenance');?>
                     </h1>
                     <h2 class="subtitle">
                         <?php echo $this->getConfig('subtitle','Please excuse us for any inconvenience');?>
@@ -83,7 +85,7 @@ class MaintenancePasswordTags extends Tags
         <form method="get" class="hide" id="form-maintenance">
         <div class="field has-addons">
           <div class="control">
-            <input class="input" name="maintenance-password" type="password" placeholder="Enter password here">
+            <input class="input" name="maintenance-password" type="password" placeholder="<?php echo $this->getConfig('placeholder','Enter password here');?>">
           </div>
           <div class="control">
             <button class="button is-info">
