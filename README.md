@@ -16,7 +16,7 @@ php please update:addons
 Then, add the following tag at the top of your layout file (usually found in `site/themes/[your theme]/layouts/default.html)`) : 
 
 ```
-{{ maintenance-password }}
+{{ MaintenancePassword }}
 ```
 
 You then need to define a password in the addon's settings.
