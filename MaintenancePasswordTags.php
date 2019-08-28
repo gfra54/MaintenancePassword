@@ -62,7 +62,7 @@ class MaintenancePasswordTags extends Tags
                 <?php } else if(empty($password)){?>
                 <div class="notification is-warning">
                   <strong>Warning. Maintenance password not set, nobody will be able to log in.</strong><br> 
-                  Go to `Addons`, then clik on the three dots at the right of the addon's line, and click `Settings'.
+                  Go to <code>Addons</code>, then click on the three dots at the right of the addon's line, and click <code>Settings</code>
                 </div>
 
             <?php }?>
