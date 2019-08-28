@@ -9,15 +9,18 @@ This addon will add a maintenance page preventing acces to yoru website. You can
 ## Getting started
 
 Juste copy the MaintenancePassword folder in your `site/addons` folder. After that, you may run the following command to refresh the addons :
-`php please update:addons`
+```
+php please update:addons
+```
 
-After that, add the following at the top of your layout file (usually found in `site/themes/[your theme]/layouts/default.html)`) : 
+Then, add the following tag at the top of your layout file (usually found in `site/themes/[your theme]/layouts/default.html)`) : 
 
-`{{ maintenance-password }}`
+```
+{{ maintenance-password }}
+```
 
-You then need to define a password in the settings
+You then need to define a password in the addon's settings.
 
-If you want to remove the maintenance page, you need to remove the addons from your site
 
 ## Settings
 
@@ -25,6 +28,11 @@ Go to `Addons`, then click on the three dots at the right of the addon's line, a
 
 Here you can set the main password.
 You can also change the title and subtitle shown on the maintenance page. You can also set a logo if you need.
+
+
+## Removing the mainenance page
+
+If you want to remove the maintenance page, you either set an empty password in the settings, or to remove the addons from your site's addons foler.
 
 ## Coming soon
 Here are some of the stuff that will be added in the near future :

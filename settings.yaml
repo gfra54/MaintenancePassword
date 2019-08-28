@@ -1,6 +1,6 @@
 fields:
   password:
-    display: Password
+    display: Password (Leave blank to deactivate the maintenance page)
     type: text
   title:
     display: Title

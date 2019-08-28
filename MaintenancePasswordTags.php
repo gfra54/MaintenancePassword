@@ -15,7 +15,7 @@ class MaintenancePasswordTags extends Tags
     {
 
         if(empty($_COOKIE['maintenance'])) {
-            $password = $this->getConfig('password');
+            if($password = $this->getConfig('password')) {
             list($uri) = explode('?',$_SERVER['REQUEST_URI']);
             if(!empty($_GET['maintenance-password'])) {
                 if($password && $_GET['maintenance-password'] == $password) {
@@ -59,12 +59,6 @@ class MaintenancePasswordTags extends Tags
                 <div class="notification is-danger">
                   Error. Wrong password.
                 </div>
-                <?php } else if(empty($password)){?>
-                <div class="notification is-warning">
-                  <strong>Warning. Maintenance password not set, nobody will be able to log in.</strong><br> 
-                  Go to <code>Addons</code>, then click on the three dots at the right of the addon's line, and click <code>Settings</code>
-                </div>
-
             <?php }?>
 
                 <section class="hero is-light is-fullheight">
@@ -110,6 +104,7 @@ class MaintenancePasswordTags extends Tags
     </html>
     <?php
     exit;
+}
 } 
 
     }
