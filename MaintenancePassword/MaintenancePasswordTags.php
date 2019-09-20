@@ -14,6 +14,12 @@ class MaintenancePasswordTags extends Tags
     public function index()
     {
 
+        if($user = User::getCurrent()) {
+            if($user->data()['super']){
+                return;
+            }
+        }
+        
         if(empty($_COOKIE['maintenance'])) {
             if($password = $this->getConfig('password')) {
             list($uri) = explode('?',$_SERVER['REQUEST_URI']);

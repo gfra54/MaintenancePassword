@@ -5,6 +5,7 @@
 
 This addon will add a maintenance page preventing acces to your website. You can sen set up a password to let "friends & family" people to cces the site. This is a great way to demo a site or remotely test new website before launch. While the maintenance page is active, you can still have access to the site's control panel.
 
+Super user that are currently logged-in to the control panel won't encounter the maintenance screen.
 
 ## Getting started
 
