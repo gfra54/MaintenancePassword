@@ -3,6 +3,7 @@
 namespace Statamic\Addons\MaintenancePassword;
 
 use Statamic\Extend\Tags;
+use Statamic\API\User;
 
 class MaintenancePasswordTags extends Tags
 {
