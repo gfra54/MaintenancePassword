@@ -16,7 +16,8 @@ class MaintenancePasswordTags extends Tags
     {
 
         if($user = User::getCurrent()) {
-            if($user->data()['super']){
+            $data = $user->data();
+            if(is_array($data) && !empty($data['super'])){
                 return;
             }
         }
